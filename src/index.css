@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .button {
+    @apply w-full flex truncate justify-around place-items-center text-white text-sm font-semibold bg-black hover:bg-white hover:text-black px-2 py-1.5 border-2 border-[#f9f8f8] mt-2 rounded-md   hover:shadow-2xl  hover:shadow-blue-600;
+  }
+  
+}
+:root {
+  font-family: sedan-regular-italic;
+  line-height: 1.5;
+  font-weight: 400;
+  font-style: italic;
+  color-scheme: light dark;
+  color:white;
+ 
+  /* background-color: black; */
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale; 
+}
+
+body {
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: auto;
+  background: linear-gradient(315deg, rgb(159, 14, 149) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgb(71, 245, 193) 98%);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
+.wave {
+  
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+      transform: translateX(1);
+  }
+
+  25% {
+      transform: translateX(-25%);
+  }
+
+  50% {
+      transform: translateX(-50%);
+  }
+
+  75% {
+      transform: translateX(-25%);
+  }
+
+  100% {
+      transform: translateX(1);
+  }
+}
+.sedan-regular {
+  font-family: "Sedan", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.custom{
+  color: black;
+  background: linear-gradient(90deg,#0f0,#1899ff,#f0f,#f00,#ff0);
+   -webkit-background-clip: text;
+-webkit-text-stroke: 0.08rem transparent;
+text-shadow: 0 0  #FF0000, 0 0 5px #0000FF;
+}
+
+
+.about{
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  color: #fff;
+  top: 70px;
+   width: 100%; 
+  height: calc(100vh-70px);
+  overflow: hidden;
+  padding-right: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.box {
+padding: 1rem;
+flex: 1 1 0px;
+margin: auto;
+justify-self: center;
+align-content: center;
+}
+.box {
+display: none;
+}
+.box div {
+position: absolute;
+top: 0;
+left: 0;
+width: 80%;
+height: 100%;
+transform-style: preserve-3d;
+}
+.box div span {
+color: #fff;
+position: absolute;
+top: 0;
+left: 0;
+display: block;
+width: 100%;
+height: 80%;
+background: linear-gradient(
+  0deg,
+  rgba(241, 241, 241, 0.1),
+  rgba(77, 77, 77, 0.1),
+  rgba(241, 241, 241, 0.1)
+);
+border-radius: 20px;
+text-align: center;
+}
+.box div span:nth-child(1) {
+transform: rotateX(0deg);
+}
+.box div span:nth-child(2) {
+transform: rotateX(45deg);
+}
+.box div span:nth-child(3) {
+transform: rotateX(-45deg);
+}
+.box div span:nth-child(4) {
+transform: rotateX(90deg);
+}
+.box div span:nth-child(5) {
+transform: rotateX(-90deg);
+}
+.box div span:nth-child(6) {
+transform: rotateX(135deg);
+}
+.box div span:nth-child(7) {
+transform: rotateX(-135deg);
+}
+.box div span:nth-child(8) {
+transform: rotateX(180deg);
+}
+
+@keyframes anim {
+0% {
+  transform: perspective(1000px) rotateX(0deg);
+}
+100% {
+  transform: perspective(1000px) rotateX(359deg);
+}
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+
+
+
+
+/* About */
+
+.box {
+  padding: 0 0.5rem;
+  max-width: 50%;
+}
+.box {
+  display: block;
+  margin: 10px;
+  transform: perspective(1000px) rotateY(-45deg);
+  width: 100px;
+  height: 500px;
+  transform-style: preserve-3d;
+  animation: anim 6s linear infinite;
+  color: #000;
+}
+  .box:hover {
+      animation: anim 28s linear infinite;
+  }
+
+} 
+
+
+.about,
+.box {
+  padding: 0 3rem;
+  max-width: 50%;
+}
+.box {
+  margin: 10px 90px;
+}
+
+
