@@ -2,7 +2,7 @@ import { useState } from 'react'
 import 'animate.css';
 import './App.css'
 import BgSnippet from './components/BgSnippet'
-import Navbar from './components/Navbar'
+import Header from './components/Header';
 import Home from './components/Home'
 import About from './components/About'
 import Project from './components/Project'
@@ -14,6 +14,7 @@ import {
   Route,
   } from "react-router-dom";
 
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -22,7 +23,7 @@ function App() {
     <Router>
     <BgSnippet/>
     
-    <Navbar/>
+    <Header/>
     <Routes>
     <Route exact path='/' element={<Home/>}/>
     <Route exact path='/about' element={<About/>}/>

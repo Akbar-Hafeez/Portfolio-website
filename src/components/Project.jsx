@@ -41,7 +41,7 @@ theme="dark"
 <ToastContainer />
     <div className="font-[sans-serif]  text-[#333] py-2 px-6">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="custom md:text-5xl text-3xl font-extrabold md:!leading-[55px] text-white">My Projects</h2>
+        <h2 className="custom md:text-5xl text-3xl font-extrabold md:!leading-[55px]  animate__animated animate__fadeInDown">My Projects</h2>
         
       </div>
       <div className="xl:max-w-7xl max-w-5xl mx-auto ">
