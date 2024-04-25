@@ -4,10 +4,10 @@ import React,{ useRef ,useState} from "react";
 const NavLinks = () => {
 return(
   <> 
-   <Link to="/">Home</Link>
-   <Link to="/about">About</Link>
-   <Link to="/project">Project</Link>
-   <Link to="/contact">Contact</Link>
+   <Link className="hover:text-gray-900 hover:underline" to="/">Home</Link>
+   <Link className="hover:text-gray-900 hover:underline" to="/about">About</Link>
+   <Link className="hover:text-gray-900 hover:underline" to="/project">Project</Link>
+   <Link className="hover:text-gray-900 hover:underline" to="/contact">Contact</Link>
    </>
 )
 }
@@ -29,10 +29,9 @@ setIsOpen(!isOpen)
   
   }
   return (
-    // <ul className='flex gap-5 font-bold text-2xl hover:text-gray-900 hover:text-[1.7rem] hover:underline'>
-      <>
-      <nav className="w-1/3">
-<div className="md:flex gap-5 font-bold text-2xl hidden">
+   <>
+      <nav className="w-1/3 md:mr-20 lg:mr-0 ">
+<div className="md:flex gap-5 font-bold text-2xl hidden  ">
        <NavLinks/>   
        </div>
        <div className="md:hidden justify-end flex">
@@ -43,7 +42,7 @@ setIsOpen(!isOpen)
        </nav>  
      
         {isOpen &&(
-            <div className="flex flex-col items-center basis-full bg-black" > 
+            <div className="flex flex-col items-center basis-full " > 
           <NavLinks/>   
        </div>
         )} 

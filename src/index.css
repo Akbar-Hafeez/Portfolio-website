@@ -6,7 +6,7 @@
   .button {
     @apply w-full flex truncate justify-around place-items-center text-white text-sm font-semibold bg-black hover:bg-white hover:text-black px-2 py-1.5 border-2 border-[#f9f8f8] mt-2 rounded-md   hover:shadow-2xl  hover:shadow-blue-600;
   }
-  
+ 
 }
 :root {
   font-family: sedan-regular-italic;
